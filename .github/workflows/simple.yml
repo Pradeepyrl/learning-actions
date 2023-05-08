@@ -17,4 +17,12 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  
+        
+  job-chain:
+    needs: [run-shell-command]
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello-world
+        run: |
+          print("hello world")
+        shell: python
