@@ -1,0 +1,32 @@
+{
+    "key": "value",
+    "key2": "value2",
+    "array": [
+      "index1",
+      "index2"
+    ],
+    "string": "a common way to write string",
+    "multi_line_string": "this is a multi line string that won't create these actual spaces in the converted JSON document\n",
+    "special_string": "containing $!, double quotes are optional",
+    "complex_object": [
+      {
+        "key": "value",
+        "some": "value"
+      },
+      {
+        "subarr": [
+          "list",
+          "inside",
+          "list"
+        ]
+      }
+    ],
+    "JSONObject": {
+      "key": "value",
+      "key2": "value2"
+    },
+    "number": 43,
+    "bool": true,
+    "float": 45.55
+  }
+  
