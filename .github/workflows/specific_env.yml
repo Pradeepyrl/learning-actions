@@ -1,0 +1,11 @@
+name: Run In Specific Container
+on: ["workflow_dispatch"]
+jobs:
+  just-a-job:
+    runs-on: ubuntu-latest
+    container: python:3.7
+    steps:
+      - name: Python Version
+        run: |
+          python --version
+        shell: bash
