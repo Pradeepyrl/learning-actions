@@ -28,7 +28,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'release.zip'
-          path: test_files/hello_world.py
+          path: hello_world.py
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
