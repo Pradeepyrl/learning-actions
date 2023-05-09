@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
   build-src:
     runs-on: ubuntu-latest
+    name: Build Source Code
     steps:
       - name: Check python version
         run: |
