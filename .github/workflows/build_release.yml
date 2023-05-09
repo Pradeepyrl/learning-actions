@@ -19,6 +19,7 @@ jobs:
           path: out.txt
   release:
     runs-on: ubuntu-latest
+    needs: build-src
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v3
