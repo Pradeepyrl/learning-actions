@@ -1,4 +1,3 @@
-name: Build & Release Source
 on: workflow_dispatch
 jobs:
   build-src:
@@ -17,8 +16,8 @@ jobs:
         with:
           name: src-output
           path: out.txt
-release:
-  runs-on: ubuntu-latest
+  release:
+    runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v3
