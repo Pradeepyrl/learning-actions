@@ -1,0 +1,28 @@
+name: Build & Release Source
+on: workflow_dispatch
+jobs:
+  build-src:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check python version
+        run: |
+          python --version
+        shell: bash
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Run Module
+        run: python3 test_files/hello_world.py > out.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: src-output
+          path: out.txt
+release:
+  runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: src-output
+      - name: Print arifact contents
+        run: cat out.txt
