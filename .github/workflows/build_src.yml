@@ -1,0 +1,14 @@
+name: Build Source Code
+on: workflow_dispatch
+jobs:
+  build-src:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check python version
+        run: |
+          python --version
+        shell: bash
+      - name: Checkout Repository
+        run: actions/checkout@v3
+      - name: Run Module
+        run: python3 test_files/hello_world.py
